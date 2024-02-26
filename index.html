@@ -128,25 +128,17 @@
         let productsArray = [];
         let price = document.getElementById('price').value;
         let customName = document.getElementById('customName').value;
-        let interval = document.getElementById('interval').value;
-        let description = document.getElementById('description').value;
 
         for (let i = 0; i < products.length; ++i) {
           productsArray[i] = {
             "product": products[i].value,
             "pricing": {
-                        "interval": interval,
                         "price": {
                             "USD": price,
                         }
                     },
             "display": {
                 "en": customName,
-            },
-            "description": {
-                "summary": {
-                    "en": description,
-                }
             },
           };
         }
@@ -167,13 +159,13 @@
         <input type="text" id="dataAccessKey" name="dataAccessKey" style="width:240px;" ><br><br><hr><br>
 
         <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" value="Juan"><br><br>
+        <input type="text" id="fname" name="fname" value="David"><br><br>
 
         <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" value="Andrade"><br><br>
+        <input type="text" id="lname" name="lname" value="Rios"><br><br>
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" style="width:340px;" value="@fastspring.com"><br><br>
+        <input type="text" id="email" name="email" style="width:340px;" value="david.rios+1@fastspring.com"><br><br>
 
         <div id="product-container">
             <label for="product1">Product:</label>
@@ -184,12 +176,6 @@
 
             <label for="customName">Custom name:</label>
             <input type="text" id="customName" name="customName"><br><br>
-
-            <label for="interval">Interval:</label>
-            <input type="text" id="interval" name="interval"><br><br>
-
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description"><br><br>
         </div>
 
         <label for="paymentMethod">Payment Method:</label>

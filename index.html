@@ -128,15 +128,21 @@
         let productsArray = [];
         let price = document.getElementById('price').value;
         let customName = document.getElementById('customName').value;
+        let interval = document.getElementById('interval').value;
+        let intervalLength = document.getElementById('intervalLength').value;
+        let intervalCount = document.getElementById('intervalCount').value;
 
         for (let i = 0; i < products.length; ++i) {
           productsArray[i] = {
-            "product": products[i].value,
+            "product": products[i].value,  
             "pricing": {
-                        "price": {
-                            "USD": price,
-                        }
-                    },
+              "interval": interval,       
+              "intervalLength": intervalLength,
+              "intervalCount": intervalCount,  
+              "price": {
+                "USD": price,
+              }
+            },
             "display": {
                 "en": customName,
             },
@@ -176,6 +182,15 @@
 
             <label for="customName">Custom name:</label>
             <input type="text" id="customName" name="customName"><br><br>
+            
+            <label for="interval">interval:</label>
+            <input type="text" id="interval" name="interval"><br><br>
+
+            <label for="intervalLength">interval Length:</label>
+            <input type="text" id="intervalLength" name="intervalLength"><br><br>
+
+            <label for="intervalCount">interval Count:</label>
+            <input type="text" id="intervalCount" name="intervalCount"><br><br>
         </div>
 
         <label for="paymentMethod">Payment Method:</label>
